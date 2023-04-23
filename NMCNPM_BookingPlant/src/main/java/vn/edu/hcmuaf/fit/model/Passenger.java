@@ -1,8 +1,9 @@
 package vn.edu.hcmuaf.fit.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Passenger {
+public class Passenger implements Serializable {
     private int id;
     private int booking_id;
     private String first_name;

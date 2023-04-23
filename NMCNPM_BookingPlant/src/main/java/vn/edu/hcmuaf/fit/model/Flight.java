@@ -1,9 +1,10 @@
 package vn.edu.hcmuaf.fit.model;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 
-public class Flight {
+public class Flight implements Serializable {
     private int id;
     private String flight_no;
     private String from_location;

@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.model;
 
-public class Preferedmeal {
+import java.io.Serializable;
+
+public class Preferedmeal implements Serializable {
     private int id;
     private String image;
     private String name;
