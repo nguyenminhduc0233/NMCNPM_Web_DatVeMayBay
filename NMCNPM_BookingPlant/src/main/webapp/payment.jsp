@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
 <head>
@@ -59,13 +60,13 @@
                             <div class="offcanvas-body p-0 mt-5">
                                 <ul class="menuList nav flex-column w-100">
                                     <li class="nav-item">
-                                        <a href="index.html" class="position-relative card-effect">
+                                        <a href="index.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-house-fill ps-4 pe-2"></i>Home
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="deals-offers.html" class="position-relative card-effect">
+                                        <a href="deals-offers.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
                                         </a>
@@ -89,19 +90,19 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html" class="position-relative card-effect">
+                                        <a href="about.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html" class="position-relative card-effect">
+                                        <a href="contact.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog.html" class="position-relative card-effect">
+                                        <a href="blog.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
                                         </a>
@@ -128,8 +129,8 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
-                        <a class="navbar-brand ms-5" href="index.html"><img src="assets/images/logo.png"
-                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <a class="navbar-brand ms-5" href="index.jsp"><img src="assets/images/logo.png"
+                                                                           alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
                         <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -170,8 +171,8 @@
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="signin.html">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="signup.html">Register</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -713,15 +714,15 @@
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold mb-4">About Us</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="about.html">About</a></li>
-                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                    <li class="nav-item"><a href="about.jsp">About</a></li>
+                                    <li class="nav-item"><a href="contact.jsp">Contact us</a></li>
                                     <li class="nav-item"><a href="#">Bank Details</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold">Legal</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                    <li class="nav-item"><a href="privacy.jsp">Privacy</a></li>
                                     <li class="nav-item"><a href="#">T&C</a></li>
                                     <li class="nav-item"><a href="#">Disclaimer</a></li>
                                     <li class="nav-item"><a href="#">Privacy and Cookies</a></li>

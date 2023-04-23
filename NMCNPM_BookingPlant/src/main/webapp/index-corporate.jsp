@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
 <head>
@@ -59,13 +60,13 @@
                             <div class="offcanvas-body p-0 mt-5">
                                 <ul class="menuList nav flex-column w-100">
                                     <li class="nav-item">
-                                        <a href="index.html" class="position-relative card-effect">
+                                        <a href="index.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-house-fill ps-4 pe-2"></i>Home
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="deals-offers.html" class="position-relative card-effect">
+                                        <a href="deals-offers.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
                                         </a>
@@ -89,19 +90,19 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html" class="position-relative card-effect">
+                                        <a href="about.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html" class="position-relative card-effect">
+                                        <a href="contact.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog.html" class="position-relative card-effect">
+                                        <a href="blog.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrow-end-circle-fill ps-4 pe-2"></i>Blogs
                                         </a>
@@ -128,8 +129,8 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
-                        <a class="navbar-brand ms-5 ms-lg-0" href="index.html"><img src="assets/images/logo.png"
-                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <a class="navbar-brand ms-5 ms-lg-0" href="index.jsp"><img src="assets/images/logo.png"
+                                                                                   alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
                         <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -143,14 +144,14 @@
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="index.html">Home
+                                                <li class="nav-item"><a class="dropdown-item" href="index.jsp">Home
                                                         Default</a>
                                                 </li>
-                                                <li class="nav-item"><a class="dropdown-item" href="index-corporate.html">Home
+                                                <li class="nav-item"><a class="dropdown-item" href="index-corporate.jsp">Home
                                                         Corporate</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="about.html">About
+                                                <li class="nav-item"><a class="dropdown-item" href="about.jsp">About
                                                         Us</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="contact.html">Contact Us</a>
+                                                <li class="nav-item"><a class="dropdown-item" href="contact.jsp">Contact Us</a>
                                                 </li>
                                                 <li class="nav-item"><a class="dropdown-item" href="#">Privacy</a></li>
                                             </ul>
@@ -195,8 +196,8 @@
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="signin.html">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="signup.html">Register</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -365,7 +366,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-lg-6 col-xl-2 px-0">
-                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-oneway.html';">
+                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-oneway.jsp';">
                                                             <span class="fw-bold">Search</span>
                                                         </button>
                                                     </div>
@@ -516,7 +517,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-lg-6 col-xl-2 px-0">
-                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-round-trip.html';">
+                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-round-trip.jsp';">
                                                             <span class="fw-bold">Search</span>
                                                         </button>
                                                     </div>
@@ -678,7 +679,7 @@
                                                                                 class="fw-bold">Close</span> </button>
                                                                     </div>
                                                                     <div class="col-12 col-lg-6 col-xl-5">
-                                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-multicity.html';">
+                                                                        <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-multicity.jsp';">
                                                                             <span class="fw-bold">Search</span>
                                                                         </button>
                                                                     </div>
@@ -1524,7 +1525,7 @@
                     <!-- more button-->
                     <div class="row my-4">
                         <div class="col-12 text-center">
-                            <a href="blog.html" class="d-inline-flex mt-2 text-link text-link-effect">
+                            <a href="blog.jsp" class="d-inline-flex mt-2 text-link text-link-effect">
                                 <span class="py-4 px-4">See more Popular Experiences</span>
                             </a>
                         </div>
@@ -1555,8 +1556,8 @@
                             <div class="col-12 col-md-6 mt-5">
                                 <p class="text-uppercase fw-bold mb-4">About Us</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="about.html">About</a></li>
-                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                    <li class="nav-item"><a href="about.jsp">About</a></li>
+                                    <li class="nav-item"><a href="contact.jsp">Contact us</a></li>
                                     <li class="nav-item"><a href="#">Bank Details</a></li>
                                 </ul>
                                 <p class="text-uppercase fw-bold mt-5">Company</p>
@@ -1570,7 +1571,7 @@
                             <div class="col-12 col-md-6 mt-5">
                                 <p class="text-uppercase fw-bold mb-4">Legal</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                    <li class="nav-item"><a href="privacy.jsp">Privacy</a></li>
                                     <li class="nav-item"><a href="#">T&C</a></li>
                                     <li class="nav-item"><a href="#">Disclaimer</a></li>
                                     <li class="nav-item"><a href="#">Privacy and Cookies</a></li>

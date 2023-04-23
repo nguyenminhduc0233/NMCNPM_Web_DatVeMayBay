@@ -14,7 +14,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <!--title tag for page -->
-    <title>FlightWorld - Flight Listing - Round Trip</title>
+    <title>FlightWorld - Flight Listing - Oneway</title>
 </head>
 
 <body>
@@ -59,13 +59,13 @@
                             <div class="offcanvas-body p-0 mt-5">
                                 <ul class="menuList nav flex-column w-100">
                                     <li class="nav-item">
-                                        <a href="index.html" class="position-relative card-effect">
+                                        <a href="index.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-house-fill ps-4 pe-2"></i>Home
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="deals-offers.html" class="position-relative card-effect">
+                                        <a href="deals-offers.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
                                         </a>
@@ -89,19 +89,19 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html" class="position-relative card-effect">
+                                        <a href="about.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html" class="position-relative card-effect">
+                                        <a href="contact.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog.html" class="position-relative card-effect">
+                                        <a href="blog.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
                                         </a>
@@ -128,8 +128,8 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
-                        <a class="navbar-brand ms-5" href="index.html"><img src="assets/images/logo.png"
-                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <a class="navbar-brand ms-5" href="index.jsp"><img src="assets/images/logo.png"
+                                                                           alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
                         <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -170,8 +170,8 @@
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="signin.html">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="signup.html">Register</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -187,13 +187,13 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs border-0" role="tablist">
                         <li class="nav-item">
-                            <button class="nav-link" id="oneway-tab" data-bs-toggle="tab" data-bs-target="#oneway" type="button" role="tab" aria-controls="oneway" aria-selected="true">
+                            <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab" data-bs-target="#oneway" type="button" role="tab" aria-controls="oneway" aria-selected="true">
                                 <span
                                     class="d-inline-block icon-20 rounded-circle bg-white align-middle me-2"></span>One-way
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link active" id="return-tab" data-bs-toggle="tab" data-bs-target="#return" type="button" role="tab" aria-controls="return" aria-selected="false">
+                            <button class="nav-link" id="return-tab" data-bs-toggle="tab" data-bs-target="#return" type="button" role="tab" aria-controls="return" aria-selected="false">
                                 <span
                                     class="d-inline-block icon-20 rounded-circle bg-white align-middle me-2"></span>Return
                             </button>
@@ -466,7 +466,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-6 col-xl-2 px-0">
-                                            <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-round-trip.html';">
+                                            <button type="submit" class="btn btn-search" onclick="window.location.href='flight-listing-round-trip.jsp';">
                                                 <span class="fw-bold">Search</span>
                                             </button>
                                         </div>
@@ -906,11 +906,11 @@
         </div>
 
         <div class="content-section">
-            <!-- flight result page - round trip start -->
+            <!-- flight result page - oneway start -->
             <div class="srp py-2">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 my-2">
+                        <div class="col-12 my-2">
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <div class="fw-bold">Berlin (BER)<i class="bi bi-arrow-right mx-2"></i>London (LHR)
@@ -922,23 +922,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 my-2">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <div class="fw-bold">London (LHR)<i class="bi bi-arrow-right mx-2"></i>Berlin (BER)
-                                    </div>
-                                    <div class="mb-1 font-small">Wed, Apr 15</div>
-                                </div>
-                                <div>
-                                    <span class="font-small">Showing 146 of 146 flights.</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3">
+                        <div class="col-12 mb-3">
                             <div class="row">
-                                <div class="col-12 col-md-12 d-none d-lg-block">
+                                <div class="col-12 col-md-12 d-none d-md-block">
                                     <div class="row g-0 border theme-border-radius p-2 theme-bg-accent-three">
                                         <div class="col-md-3">
                                             <span class="font-small fw-bold">Airline</span>
@@ -952,14 +940,14 @@
                                         <div class="col-md-2">
                                             <span class="font-small fw-bold">Arrive</span>
                                         </div>
-                                        <div class="col-md-3 text-center">
+                                        <div class="col-md-3 text-md-center">
                                             <span class="font-small fw-bold">Price<i class="bi bi-arrow-up"></i>
                                                 <input type="checkbox" class="cursor-pointer">
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-12 d-md-block d-lg-none">
+                                <div class="col-12 col-md-12 d-md-block d-md-none">
                                     <button class="btn w-100 border theme-border-radius p-2 theme-bg-accent-three" type="button">
                                         <i class="bi bi-sliders me-2"></i><span class="visible-xs font-medium">Sort
                                             Depart</span>
@@ -967,499 +955,402 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3">
-                            <div class="row">
-                                <div class="col-12 col-md-12 d-none d-lg-block">
-                                    <div class="row g-0 border theme-border-radius p-2 theme-bg-accent-three">
-                                        <div class="col-md-3">
-                                            <span class="font-small fw-bold">Airline</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3" data-aos="fade-up">
+                            <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/6E.jpg" class="img-fluid theme-border-radius" alt="Indigo" title="airline Indigo">
                                         </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Depart</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Duration</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Arrive</span>
-                                        </div>
-                                        <div class="col-md-3 text-center">
-                                            <span class="font-small fw-bold">Price<i class="bi bi-arrow-up"></i>
-                                                <input type="checkbox" class="cursor-pointer">
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">IndiGo
                                             </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-12 d-md-block d-lg-none">
-                                    <button class="btn w-100 border theme-border-radius p-2 theme-bg-accent-three" type="button">
-                                        <i class="bi bi-sliders me-2"></i><span class="visible-xs font-medium">Sort
-                                            Arrival</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="100">
-                            <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">IndiGo |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/6E.jpg" class="img-fluid theme-border-radius" alt="Indigo" title="airline Indigo">
-                                    </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">IndiGo |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/6E.jpg" class="img-fluid theme-border-radius" alt="Indigo" title="airline Indigo">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/airasia.jpg" class="img-fluid theme-border-radius" alt="airasia" title="airline airasia">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Airasia
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">AE - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- repetable -->
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="300">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Airasia |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/airasia.jpg" class="img-fluid theme-border-radius" alt="airasia" title="airline airasia">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/spicejet.jpg" class="img-fluid theme-border-radius" alt="spicejet" title="airline spicejet">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Spicejet
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">SP - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Airasia |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/airasia.jpg" class="img-fluid theme-border-radius" alt="airasia" title="airline airasia">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Vistara
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- repetable -->
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="500">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Spicejet |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/spicejet.jpg" class="img-fluid theme-border-radius" alt="spicejet" title="airline spicejet">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/thaiAir.jpg" class="img-fluid theme-border-radius" alt="thaiAir" title="airline thaiAir">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">ThaiAir
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="600">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Spicejet |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/spicejet.jpg" class="img-fluid theme-border-radius" alt="spicejet" title="airline spicejet">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/6E.jpg" class="img-fluid theme-border-radius" alt="Indigo" title="airline Indigo">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">IndiGo
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- repetable -->
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="700">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">ThaiAir |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/thaiAir.jpg" class="img-fluid theme-border-radius" alt="thaiAir" title="airline thaiAir">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/airasia.jpg" class="img-fluid theme-border-radius" alt="airasia" title="airline airasia">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Airasia
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">AE - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="800">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">ThaiAir |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/thaiAir.jpg" class="img-fluid theme-border-radius" alt="thaiAir" title="airline thaiAir">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/spicejet.jpg" class="img-fluid theme-border-radius" alt="spicejet" title="airline spicejet">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Spicejet
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">SP - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- repetable -->
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="900">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Vistara |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">Vistara
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-xl-6 mb-3" data-aos="fade-up" data-aos-delay="900">
+                        <!-- repetable -->
+                        <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
-                                <div class="col-12 col-lg-3">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Vistara |
-                                            6E - 315</span>
-                                    </div>
-                                    <div>
-                                        <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="assets/images/icons/thaiAir.jpg" class="img-fluid theme-border-radius" alt="thaiAir" title="airline thaiAir">
+                                        </div>
+                                        <div class="d-flex flex-column ms-2">
+                                            <span class="font-small d-inline-flex mb-0 align-middle">ThaiAir
+                                            </span>
+                                            <span class="font-small d-inline-flex mb-0 align-middle">6E - 315</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <a href="#" class="font-small">Flight Details</a>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">07:20</div>
                                     <div class="font-small">BER</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="font-small">03h 15m</div>
                                     <span class="stops"></span>
                                     <div class="font-small">Non Stop</div>
                                 </div>
-                                <div class="col-4 col-lg-2">
+                                <div class="col-4 col-md-2">
                                     <div class="fw-bold">08:20</div>
                                     <div class="font-small">LHR</div>
                                 </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
+                                <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
                                     <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                    <button type="submit" class="btn-select btn btn-effect">
+                                    <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
                                         <span class="font-small">Select</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- repetable -->
-                </div>
-            </div>
-            <!-- flight selection content -->
-            <div class="selected-strip theme-bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-xl-4 mb-3 mb-lg-0 border-end">
-                            <div class="row g-0 p-2 align-items-center">
-                                <div class="col-12">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Vistara |
-                                            6E - 315</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-2">
-                                    <div>
-                                        <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
-                                    </div>
-                                </div>
-                                <div class="col-4 col-lg-2">
-                                    <div class="fw-bold">07:20</div>
-                                    <div class="font-small">BER</div>
-                                </div>
-                                <div class="col-4 col-lg-2">
-                                    <div class="fw-bold">08:20</div>
-                                    <div class="font-small">LHR</div>
-                                </div>
-                                <div class="col-4 col-lg-3">
-                                    <div class="font-small">03h 15m</div>
-                                    <span class="stops"></span>
-                                    <div class="font-small">Non Stop</div>
-                                </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
-                                    <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                </div>
-                                <div class="col-12">
-                                    <div>
-                                        <a href="#" class="font-small">Flight Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-xl-4 mb-3 mb-lg-0 border-end">
-                            <div class="row g-0 p-2 align-items-center">
-                                <div class="col-12">
-                                    <div>
-                                        <span class="font-small d-inline-flex mb-0 align-middle lh-1">Vistara |
-                                            6E - 315</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-2">
-                                    <div>
-                                        <img src="assets/images/icons/vistara.jpg" class="img-fluid theme-border-radius" alt="vistara" title="airline vistara">
-                                    </div>
-                                </div>
-                                <div class="col-4 col-lg-2">
-                                    <div class="fw-bold">07:20</div>
-                                    <div class="font-small">BER</div>
-                                </div>
-                                <div class="col-4 col-lg-2">
-                                    <div class="fw-bold">08:20</div>
-                                    <div class="font-small">LHR</div>
-                                </div>
-                                <div class="col-4 col-lg-3">
-                                    <div class="font-small">03h 15m</div>
-                                    <span class="stops"></span>
-                                    <div class="font-small">Non Stop</div>
-                                </div>
-                                <div class="col-12 col-lg-3 text-center mt-2 mt-lg-0">
-                                    <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>4755</div>
-                                </div>
-                                <div class="col-12">
-                                    <div>
-                                        <a href="#" class="font-small">Flight Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-xl-4 mb-3 mb-lg-0 align-self-center">
-                            <div class="row">
-                                <div class="col-6 col-lg-7 align-self-center">
-                                    <span class="fw-bold fs-5">Total Fare:</span>
-                                    <span class="fw-bold fs-5">
-                                        <i class="bi bi-currency-dollar"></i>
-                                        <span class="">9506</span>
-                                    </span>
-                                    <a href="#" class="font-small">Fare Details</a>
-                                </div>
-                                <div class="col-6 col-lg-5">
-                                    <button type="submit" class="btn btn-effect btn-book" onclick="window.location.href='review-booking.html';">Book Now</button>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- repetable -->
                     </div>
                 </div>
             </div>
+
 
         </div>
         <!-- page footer section -->
@@ -1493,15 +1384,15 @@
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold mb-4">About Us</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="about.html">About</a></li>
-                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                    <li class="nav-item"><a href="about.jsp">About</a></li>
+                                    <li class="nav-item"><a href="contact.jsp">Contact us</a></li>
                                     <li class="nav-item"><a href="#">Bank Details</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold">Legal</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                    <li class="nav-item"><a href="privacy.jsp">Privacy</a></li>
                                     <li class="nav-item"><a href="#">T&C</a></li>
                                     <li class="nav-item"><a href="#">Disclaimer</a></li>
                                     <li class="nav-item"><a href="#">Privacy and Cookies</a></li>

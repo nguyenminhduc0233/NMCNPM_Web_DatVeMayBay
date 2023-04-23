@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
 <head>
@@ -14,7 +15,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <!--title tag for page -->
-    <title>Flight World - About Us Page</title>
+    <title>Flight World - Contact Us Page</title>
 </head>
 
 <body>
@@ -59,13 +60,13 @@
                             <div class="offcanvas-body p-0 mt-5">
                                 <ul class="menuList nav flex-column w-100">
                                     <li class="nav-item">
-                                        <a href="index.html" class="position-relative card-effect">
+                                        <a href="index.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-house-fill ps-4 pe-2"></i>Home
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="deals-offers.html" class="position-relative card-effect">
+                                        <a href="deals-offers.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
                                         </a>
@@ -89,19 +90,19 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html" class="position-relative card-effect">
+                                        <a href="about.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html" class="position-relative card-effect">
+                                        <a href="contact.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog.html" class="position-relative card-effect">
+                                        <a href="blog.jsp" class="position-relative card-effect">
                                             <div class="card-box"></div>
                                             <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
                                         </a>
@@ -128,8 +129,8 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
-                        <a class="navbar-brand ms-5" href="index.html"><img src="assets/images/logo.png"
-                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <a class="navbar-brand ms-5" href="index.jsp"><img src="assets/images/logo.png"
+                                                                           alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
                         <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -170,8 +171,8 @@
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="signin.html">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="signup.html">Register</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -186,7 +187,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-12">
-                            <span class="fw-bold theme-text-white">About Us</span>
+                            <span class="fw-bold theme-text-white">Contact Us</span>
                         </div>
                     </div>
                 </div>
@@ -198,114 +199,103 @@
             <section class="theme-bg-white pt-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-2 mb-4 mb-md-0" data-aos="fade-up">
+                        <div class="col-12 col-md-5 mb-4 mb-md-0">
                             <div class="d-flex flex-column theme-border-radius theme-bg-white theme-box-shadow">
-                                <a href="#about" class="border-bottom p-4 theme-text-accent-one">Company</a>
-                                <a href="#our-team" class="border-bottom p-4 theme-text-accent-one">Team</a>
-                                <a href="#why-us" class="border-bottom p-4 theme-text-accent-one">Why Us</a>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5404266061414!2d-0.12403836556756871!3d51.50330055369121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2sin!4v1662441698175!5m2!1sen!2sin"
+                                    width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                        <div class="col-12 col-md-10" id="about" data-aos="fade-up" data-aos-delay="200">
-                            <h2 class="fs-2 mb-3">About Flight World
+                        <div class="col-12 col-md-6 offset-lg-1 align-self-center">
+                            <h2 class="display-4 mb-3 fw-bold text-color">Feel Free Contact Us Now
                             </h2>
-                            <p class="mb-3 theme-text-accent-two font-medium lh-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id erat tellus. Sed porta venenatis interdum. In augue ipsum, finibus quis dapibus at, aliquet vitae nibh. Fusce et mollis turpis. Interdum et malesuada fames ac ante
-                                ipsum primis in faucibus. Fusce nisi orci, sodales at bibendum nec, mollis et nunc. Suspendisse commodo ac ex sit amet aliquam. Donec ante mauris, convallis et massa vel, luctus auctor turpis. Curabitur dolor lectus, vehicula
-                                quis finibus in, tempus nec sapien. In facilisis urna vitae arcu efficitur consectetur. Etiam dolor nunc, viverra eu maximus a, dictum vitae felis. Pellentesque eget justo felis. Ut massa magna, porttitor vel tempus non,
-                                aliquet sed orci. Integer viverra tellus sed nisl congue blandit.
-                                <br>
-                                <br> Nunc lacinia vestibulum sem id fringilla. Nulla facilisi. Aenean volutpat leo ac nunc laoreet, vel lobortis dolor maximus. Cras sodales sollicitudin felis, eu bibendum ligula blandit non. Nulla non consectetur arcu.
-                                Aenean lacinia posuere lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris condimentum, arcu ac condimentum congue, purus nisi fringilla orci, bibendum aliquet lorem arcu sed leo. Donec nulla erat,
-                                congue vel facilisis a, dapibus ut odio. Curabitur lacinia risus est, in auctor purus viverra eu. Nulla et hendrerit ipsum. In euismod arcu orci, ut vestibulum eros venenatis vitae. Donec luctus ante vel hendrerit placerat.
-                                Aliquam diam purus, dapibus non purus non, pretium luctus felis. Integer at nisl augue.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-12 mt-4" data-aos="fade-down" data-aos-delay="300">
-                            <img src="assets/images/about-us-bg.jpg" alt="about us" class="img-fluid w-100">
-                        </div>
-                        <div class="col-12 col-md-6 mt-5 align-self-center" data-aos="fade-up" data-aos-delay="300">
-                            <p class="company-qotes fst-italic">Our work does make sense only if it is a faithful witness of his time.
-                                <span class="d-flex mt-5 font-medium">John Doe - Director</span>
-                            </p>
-
-                        </div>
-                        <!-- team meeting collarge -->
-                        <div class="col-12 col-md-6 mt-5" data-aos="fade-down" data-aos-delay="400">
-                            <img src="assets/images/aboutus-team.jpg" alt="about us" class="img-fluid w-100 about-pic">
-                        </div>
-                        <!-- team picture collarge -->
-                        <div class="col-12 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="400">
-                            <img src="assets/images/about-team.png" alt="about us" class="img-fluid w-100">
+                            <p class="font-medium theme-text-accent-two mb-0"> Submit your queries here and we will get back to you as soon as possible.</p>
+                            <div class="mt-5">
+                                <form id="contact-form" method="post" action="contact.php" class="send">
+                                    <div class="messages"></div>
+                                    <div class="controls">
+                                        <div class="form-floating mb-4">
+                                            <input id="form_name" type="text" name="name" class="form-control custum-input" placeholder="Your Name" required="required" data-error="Name is required.">
+                                            <label>Your Name</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-floating mb-4">
+                                            <input id="form_email" type="email" name="email" class="form-control custum-input " placeholder="Your Email" required="required" data-error="Valid Email is required.">
+                                            <label>Your Email</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-floating mb-4">
+                                            <input id="form_phone" type="Number" name="phone" class="form-control custum-input" placeholder="Your Phone" required="required" data-error="Please specify your Phone.">
+                                            <label>Your Phone Number</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-floating mb-4">
+                                            <textarea id="form_message" name="message" class="form-control custum-input" placeholder="Message" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                            <label>Comments</label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="mb-4 text-center">
+                                            <button type="Submit" value="Send message" class="btn btn-effect btn-book px-5 min-h58">Send
+                                                Request</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <!-- our team content -->
-                        <div class="col-12 col-md-6 mt-5 align-self-center" id="our-team" data-aos="fade-down" data-aos-delay="300">
-                            <h2 class="fs-2 mb-3">Our Team
-                            </h2>
-                            <p class="mb-3 theme-text-accent-two font-medium lh-lg">Nunc lacinia vestibulum sem id fringilla. Nulla facilisi. Aenean volutpat leo ac nunc laoreet, vel lobortis dolor maximus. Cras sodales sollicitudin felis, eu bibendum ligula blandit non. Nulla non consectetur arcu. Aenean
-                                lacinia posuere lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                                <br><br> Mauris condimentum, arcu ac condimentum congue, purus nisi fringilla orci, bibendum aliquet lorem arcu sed leo. Donec nulla erat, congue vel facilisis a, dapibus ut odio. Curabitur lacinia risus est, in auctor
-                                purus viverra eu. Nulla et hendrerit ipsum. In euismod arcu orci, ut vestibulum eros venenatis vitae.
-                            </p>
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <h3 class="fs-1 fw-bold mb-2">600</h3>
-                                    <p class="font-medium theme-text-accent-two mb-0">million flight sustainable work</p>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <h3 class="fs-1 fw-bold mb-2">700</h3>
-                                    <p class="font-medium theme-text-accent-two mb-0">million flight sustainable work</p>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <h3 class="fs-1 fw-bold mb-2">1.2</h3>
-                                    <p class="font-medium theme-text-accent-two mb-0">million flight sustainable work</p>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <h3 class="fs-1 fw-bold mb-2">110</h3>
-                                    <p class="font-medium theme-text-accent-two mb-0">million flight sustainable work</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <!-- why us section -->
-                <div class="why-us mt-5 py-5 theme-bg-accent-three" id="why-us">
+                <!-- customer service section -->
+                <div class="why-us mt-5 py-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-md-12 text-center mb-5" data-aos="fade-up" data-aos-delay="500">
-                                <h4 class="mb-3 fs-2">Why Flight World</h4>
-                                <p class="mb-0 max-1 theme-text-accent-two">Working at Flight World is bound to be one of the most amazing experiences of your life. The bonds you build, the friends you make and the stupendous</p>
+                            <div class="col-12 col-md-12 text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+                                <h4 class="display-4 mb-3 fw-bold text-color">We Are Here For You</h4>
+                                <p class="font-medium theme-text-accent-two mb-0 max-1">We’d love to hear about it. Take five minutes to fill out our project form so that we can get to know you and understand your project.</p>
                             </div>
-                            <div class="col-12 col-md-3 text-center mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="600">
-                                <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
-                                    <img src="assets/images/icons/about-us-icon01.png" alt="about us" class="img-fluid">
+                            <div class="col-12 col-lg-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
+                                            <img src="assets/images/icons/enquiry-icon.svg" alt="enquiry-icon" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-3 fw-bold fs-6">Write to us
+                                        </h2>
+                                        <a href="mailto:support@flightworld.com" class="mb-0 max-1 theme-text-accent-one font-medium">Support@flightworld.com</a>
+                                    </div>
                                 </div>
-                                <h2 class="mb-3 fw-bold fs-5">Great Peers
-                                </h2>
-                                <p class="mb-0 max-1 theme-text-accent-two font-medium">We are a team of achievers. Our folks are ambitious, go getters, fun loving, aware and proactive</p>
                             </div>
-                            <div class="col-12 col-md-3 text-center mb-3 mb-md-0" data-aos="fade-down" data-aos-delay="600">
-                                <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
-                                    <img src="assets/images/icons/about-us-icon02.png" alt="about us" class="img-fluid">
+                            <div class="col-12 col-lg-4 mb-3 mb-md-0" data-aos="fade-down" data-aos-delay="300">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
+                                            <img src="assets/images/icons/customer-care.svg" alt="customer-care" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-3 fw-bold fs-6">Customer Care
+                                        </h2>
+                                        <span class="mb-0 max-1 theme-text-accent-one font-medium">+91 011 - 1111
+                                            1100</span>
+                                    </div>
                                 </div>
-                                <h2 class="mb-3 fw-bold fs-5">Most Trusted Brand
-                                </h2>
-                                <p class="mb-0 max-1 theme-text-accent-two font-medium">With a strong focus on fulfilling customer needs and service, we are the most trusted online travel brand</p>
                             </div>
-                            <div class="col-12 col-md-3 text-center mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="600">
-                                <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
-                                    <img src="assets/images/icons/about-us-icon03.png" alt="about us" class="img-fluid">
+                            <div class="col-12 col-lg-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
+                                            <img src="assets/images/icons/office-hours.svg" alt="office-hours" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-3 fw-bold fs-6">Office Hours
+                                        </h2>
+                                        <span class="mb-0 max-1 theme-text-accent-one font-medium">7 days a week
+                                            <br>
+                                            09:00am to 5:00pm</span>
+                                    </div>
                                 </div>
-                                <h2 class="mb-3 fw-bold fs-5">Fun at Work
-                                </h2>
-                                <p class="mb-0 max-1 theme-text-accent-two font-medium">Cricket Matches, Festival Celebrations, Yummy Food Stalls,Surprise Games…. working with us is never boring!
-                                </p>
-                            </div>
-                            <div class="col-12 col-md-3 text-center mb-3 mb-md-0" data-aos="fade-down" data-aos-delay="600">
-                                <div class="d-inline-flex mb-3 p-4 rounded-circle theme-bg-white theme-box-shadow">
-                                    <img src="assets/images/icons/about-us-icon04.png" alt="about us" class="img-fluid">
-                                </div>
-                                <h2 class="mb-3 fw-bold fs-5">Open Culture
-                                </h2>
-                                <p class="mb-0 max-1 theme-text-accent-two font-medium">Every view and opinion is heard and respected. We talk to people not their designations.</p>
                             </div>
                         </div>
                     </div>
@@ -325,7 +315,7 @@
                         <form class="form">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="input-group">
+                                    <div class="input-floating">
                                         <input type="text" class="form-control py-3 rounded-0" id="inputPassword2" placeholder="Enter your email address">
                                         <button type="button" class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect">Subscribe</button>
                                     </div>
@@ -345,15 +335,15 @@
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold mb-4">About Us</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="about.html">About</a></li>
-                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                    <li class="nav-item"><a href="about.jsp">About</a></li>
+                                    <li class="nav-item"><a href="contact.jsp">Contact us</a></li>
                                     <li class="nav-item"><a href="#">Bank Details</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-4 mt-5">
                                 <p class="text-uppercase fw-bold">Legal</p>
                                 <ul class="fl-menu">
-                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                    <li class="nav-item"><a href="privacy.jsp">Privacy</a></li>
                                     <li class="nav-item"><a href="#">T&C</a></li>
                                     <li class="nav-item"><a href="#">Disclaimer</a></li>
                                     <li class="nav-item"><a href="#">Privacy and Cookies</a></li>
@@ -422,6 +412,9 @@
     <script src="assets/js/main.js"></script>
     <!-- animation aos library -->
     <script src="assets/js/aos.js"></script>
+    <!-- Contact Form js files -->
+    <script src="assets/js/validator.min.js"></script>
+    <script src="assets/js/contact.js"></script>
 </body>
 
 </html>
