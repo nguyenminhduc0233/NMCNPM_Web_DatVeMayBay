@@ -60,4 +60,18 @@ public class UserService {
         }
         return sb.toString();
     }
+
+    public static User getUser(int id){
+        try {
+            PreparedStatement preparedStatement = DBConnect.getInstance().getConnection().prepareStatement("select username,email,password, role, created_at, name from users where id=?");
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                return new User(id,resultSet.getString("username"),resultSet.getString("email"),resultSet.getString("password"),resultSet.getString("role"),resultSet.getDate("created_at"));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

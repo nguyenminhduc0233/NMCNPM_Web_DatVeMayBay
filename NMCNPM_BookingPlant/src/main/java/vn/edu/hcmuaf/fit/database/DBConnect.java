@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class DBConnect {
     private static DBConnect instance;
-    private static final String DB_URL = System.getenv("DB_URL");
-    private static final String USER = System.getenv("USER");
-    private static final String PASS = System.getenv("PASS");
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bookingplantticket";
+    private static final String USER = "root";
+    private static final String PASS = "";
     private Connection connection;
 
     private DBConnect(){
