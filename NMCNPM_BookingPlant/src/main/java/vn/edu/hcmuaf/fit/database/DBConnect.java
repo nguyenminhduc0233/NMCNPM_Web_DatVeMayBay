@@ -1,52 +1,46 @@
 package vn.edu.hcmuaf.fit.database;
+
 import io.github.cdimascio.dotenv.Dotenv;
+
 import java.sql.*;
 
 public class DBConnect {
-    private static DBConnect instance;
-    public static Dotenv dotenv = Dotenv.load();
+    private static final Dotenv dotenv = Dotenv.load();
     private static final String DB_URL = dotenv.get("DB_URL");
-    private static final String DBNAME = dotenv.get("DB_NAME");
+    private static final String DB_NAME = dotenv.get("DB_NAME");
     private static final String USER = dotenv.get("DB_USER");
     private static final String UNICODE = dotenv.get("DB_UNICODE");
     private static final String PASS = dotenv.get("DB_PASSWORD");
 
-    private Connection connection;
+    private static DBConnect instance;
+    private final Connection connection;
 
-    private DBConnect(){
+    private DBConnect() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            this.connection = DriverManager.getConnection(DB_URL + DB_NAME + UNICODE, USER, PASS);
+            System.out.println("Kết nối Database thành công");
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Kết nối Database Thất bại");
+            throw new RuntimeException(e);
+        }
     }
-    public static DBConnect getInstance(){
-        if(instance == null){
+
+    public static synchronized DBConnect getInstance() {
+        if (instance == null) {
             instance = new DBConnect();
-            try {
-                instance.connect();
-                System.out.println("Kết nối Database thành công");
-            } catch (SQLException | ClassNotFoundException e) {
-                System.out.println("Kết nối Database Thất bại");
-                throw new RuntimeException(e);
-            }
         }
         return instance;
     }
 
-    private void connect() throws SQLException, ClassNotFoundException {
-        if(connection==null||connection.isClosed()){
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL+ DBNAME+ UNICODE,USER,PASS);
-
-        }
-    }
-    public Statement get(){
-        try{
-            connect();
-            return connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        }catch (SQLException | ClassNotFoundException e){
-            e.printStackTrace();
-        }
-        return null;
+    public Statement getStatement() throws SQLException {
+        return this.connection.createStatement(
+                ResultSet.TYPE_SCROLL_SENSITIVE,
+                ResultSet.CONCUR_READ_ONLY
+        );
     }
 
     public Connection getConnection() {
-        return connection;
+        return this.connection;
     }
 }

@@ -2,7 +2,7 @@ package vn.edu.hcmuaf.fit.controllers;
 
 import vn.edu.hcmuaf.fit.models.Passenger;
 import vn.edu.hcmuaf.fit.services.PassengerService;
-import vn.edu.hcmuaf.fit.services.SupportFunction;
+import vn.edu.hcmuaf.fit.utils.SupportFunction;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
