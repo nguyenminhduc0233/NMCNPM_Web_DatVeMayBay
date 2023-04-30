@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.database.DBConnect;
-import vn.edu.hcmuaf.fit.model.Preferedmeal;
+import vn.edu.hcmuaf.fit.models.Preferedmeal;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

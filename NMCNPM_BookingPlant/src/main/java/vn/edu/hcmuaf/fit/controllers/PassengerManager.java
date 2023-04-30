@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.fit.controllers;
 
-import vn.edu.hcmuaf.fit.model.Passenger;
+import vn.edu.hcmuaf.fit.models.Passenger;
 import vn.edu.hcmuaf.fit.services.PassengerService;
 
 import javax.servlet.ServletException;

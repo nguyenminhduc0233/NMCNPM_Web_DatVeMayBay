@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.database.DBConnect;
-import vn.edu.hcmuaf.fit.model.Bagage;
+import vn.edu.hcmuaf.fit.models.Bagage;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

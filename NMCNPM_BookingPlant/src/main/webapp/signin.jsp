@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
@@ -172,6 +172,7 @@
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
+<%--                                                2. Chọn signup--%>
                                                 <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
@@ -207,6 +208,7 @@
                                 </div>
                                 <div class="col-12">
                                     <form class="needs-validation" novalidate>
+<%--                                        2. Nhập email, password đúng định dạng--%>
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Email Address</label>
                                             <input type="email" class="form-control min-h58" id="exampleInputEmail1" placeholder="Enter Your Email" required>
@@ -219,7 +221,9 @@
                                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                             <label class="form-check-label font-small" for="exampleCheck1">Remember
                                                 Me</label>
-                                        </div>
+                                        </div
+<%--                                                9 showSignInError(msg)--%>
+                                        <h2 style="text-align:center; color:red;">${error}</h2>
                                         <div class="mb-3">
                                             <button type="submit" class="btn btn-effect btn-book px-5 min-h58" onclick="window.location.href='#';">Login</button>
                                             <span class="font-medium">

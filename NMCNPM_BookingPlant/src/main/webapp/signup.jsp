@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
@@ -203,7 +203,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <form class="needs-validation" novalidate action="RegisterServlet" method="post">
+                                    <form class="needs-validation" novalidate action="/register" method="post">
+<%--                                        3. Nhập username, email, password đúng định dạng--%>
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" name="username">
                                             <label for="floatingInput">Your Name</label>
@@ -235,7 +236,9 @@
                                                     condition</a>
                                                 and <a href="#">Privacy Policy</a></label>
                                         </div>
+                                        <h2 style="text-align:center; color:red;">${errorMessage}</h2>
                                         <div class="mb-3">
+<%--                                            4. Nhấn nút  "Register" Button--%>
                                             <button type="submit" class="btn btn-effect btn-book px-5 min-h58" onclick="window.location.href='#';">Register</button>
                                             <span class="font-medium">
                                                 <span class="mx-3">Already a member?</span>

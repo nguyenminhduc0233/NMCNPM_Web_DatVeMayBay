@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
+
 import vn.edu.hcmuaf.fit.database.DBConnect;
-import vn.edu.hcmuaf.fit.model.User;
+import vn.edu.hcmuaf.fit.models.User;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -14,12 +15,29 @@ public class UserService {
     public boolean register(String username, String email, String password) {
         try {
             Connection connection = DBConnect.getInstance().getConnection();
+
+            // 6. checkUsernameExists(username) checkEmailExists(email)
+            if (checkUsernameExists(username)) {
+                System.out.println("Username already exists");
+                return false;
+            }
+            if (checkEmailExists(email)) {
+                // if email/username != tồn tại
+                System.out.println("Email already exists");
+                return false;
+            }
             PreparedStatement statement = connection.prepareStatement("INSERT INTO users (username, email, password, role, created_at) VALUES (?, ?, ?, ?, ?)");
             statement.setString(1, username);
             statement.setString(2, email);
+
+            // 7. hashPassword(password)
             statement.setString(3, hashPassword(password));
             statement.setString(4, "user");
             statement.setDate(5, new java.sql.Date(new Date().getTime()));
+
+            // 8 . excuteQuery(request)
+
+            // 10. Lưu thông tin người dùng
             int rowsInserted = statement.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException | NoSuchAlgorithmException e) {
@@ -33,7 +51,9 @@ public class UserService {
             Connection connection = DBConnect.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE username = ? AND password = ?");
             statement.setString(1, username);
+            // 5. hashPassword(password)
             statement.setString(2, hashPassword(password));
+            // 6 . excuteQuery(request)
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -61,6 +81,36 @@ public class UserService {
         return sb.toString();
     }
 
+    public boolean checkUsernameExists(String username) {
+        try {
+            Connection connection = DBConnect.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT COUNT(*) FROM users WHERE username = ?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int count = resultSet.getInt(1);
+            return count > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean checkEmailExists(String email) {
+        try {
+            Connection connection = DBConnect.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT COUNT(*) FROM users WHERE email = ?");
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int count = resultSet.getInt(1);
+            return count > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public static User getUser(int id){
         try {
             PreparedStatement preparedStatement = DBConnect.getInstance().getConnection().prepareStatement("select username,email,password, role, created_at, name from users where id=?");
@@ -75,3 +125,4 @@ public class UserService {
         return null;
     }
 }
+

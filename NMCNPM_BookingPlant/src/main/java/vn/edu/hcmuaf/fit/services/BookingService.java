@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.database.DBConnect;
-import vn.edu.hcmuaf.fit.model.Booking;
+import vn.edu.hcmuaf.fit.models.Booking;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
