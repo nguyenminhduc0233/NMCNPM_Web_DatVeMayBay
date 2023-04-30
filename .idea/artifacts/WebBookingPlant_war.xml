@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebBookingPlant:war">
+    <output-path>$PROJECT_DIR$/NMCNPM_BookingPlant/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>WebBookingPlant</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="WebBookingPlant.war">
+      <element id="artifact" artifact-name="WebBookingPlant:war exploded" />
+    </root>
+  </artifact>
+</component>

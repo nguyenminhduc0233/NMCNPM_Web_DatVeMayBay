@@ -10,6 +10,7 @@ public class DBConnect {
     private static final String USER = dotenv.get("DB_USER");
     private static final String UNICODE = dotenv.get("DB_UNICODE");
     private static final String PASS = dotenv.get("DB_PASSWORD");
+
     private Connection connection;
 
     private DBConnect(){
