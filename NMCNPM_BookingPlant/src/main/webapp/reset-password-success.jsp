@@ -2,23 +2,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="ThemesLay">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="ThemesLay">
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
 
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/main.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/main.css" rel="stylesheet">
 
-    <!--title tag for page -->
-    <title>Flight World - Login Page</title>
-</head>
+        <!--title tag for page -->
+        <title>Flight World - Login Page</title>
+    </head>
 
-<body>
+    <body>
     <!-- preloader area -->
     <div class="preloader">
         <div class="d-table">
@@ -172,7 +172,7 @@
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
-<%--                                                2. Chọn signup--%>
+                                                <%--                                                2. Chọn signup--%>
                                                 <li class="nav-item"><a class="dropdown-item" href="signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
@@ -201,41 +201,18 @@
 
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <span class="fs-4 fw-bold">Sign in</span>
-                                        <p class="font-medium mb-0 theme-text-accent-one">Sign in and Get lots of Cashback Rewards and Discount
+                                        <span class="fs-4 fw-bold">Send Email</span>
+                                        <p class="font-medium mb-0 theme-text-accent-one">Send Email and Get lots of Cashback Rewards and Discount
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <form class="needs-validation" novalidate action="/login" method="post">
-<%--                                        2. Nhập email, password đúng định dạng--%>
+                                    <form class="needs-validation" novalidate>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Username</label>
-                                            <input type="text" class="form-control min-h58" id="exampleInputEmail1" placeholder="Enter Your Username" name="username" required>
+                                            <h2>Đã Gửi Mật khẩu về Email bạn thành công , bạn vui lòng kiểm tra trong email của mình</h2>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                                            <input type="password" class="form-control min-h58" id="exampleInputPassword1" placeholder="Enter Your Password" name="password" required>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label font-small" for="exampleCheck1">Remember
-                                                Me</label>
-                                        </div
-<%--                                                9 showSignInError(msg)--%>
-                                        <h2 style="text-align:center; color:red;">${error}</h2>
-                                        <div class="mb-3">
-                                            <button type="submit" class="btn btn-effect btn-book px-5 min-h58" onclick="window.location.href='#';">Login</button>
-                                            <span class="font-medium">
-                                                <span class="mx-3 text-uppercase">or</span>
-                                            <a href="signup.jsp" class="">Create New Account</a>
-
-
-                                            </span>
-                                            <span class="font-medium">
-                                            <span class="mx-3 text-uppercase">or</span>
-                                            <a href="forgot-password.jsp" class="">Forgot Password ?</a>
-                                             </span>
+                                            <a href="index.jsp" class="">Back to Home</a>
                                         </div>
                                     </form>
                                 </div>
@@ -355,6 +332,6 @@
     <script src="assets/js/main.js"></script>
     <!-- animation aos library -->
     <script src="assets/js/aos.js"></script>
-</body>
+    </body>
 
 </html>
