@@ -1,6 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Booking" %>
 <%@ page import="java.util.List" %>
-<%@ page import="vn.edu.hcmuaf.fit.model.NumberFormat" %>
+<%@ page import="vn.edu.hcmuaf.fit.utils.NumberFormat" %>
 <%@ page import="vn.edu.hcmuaf.fit.services.*" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Passenger" %>
 <%@ page import="vn.edu.hcmuaf.fit.services.BookingService" %>

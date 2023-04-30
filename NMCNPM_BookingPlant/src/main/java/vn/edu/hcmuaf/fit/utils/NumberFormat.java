@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.model;
+package vn.edu.hcmuaf.fit.utils;
 
 public class NumberFormat {
     public String numberFormat (int price) {

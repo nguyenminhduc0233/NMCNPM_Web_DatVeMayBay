@@ -26,7 +26,7 @@ public class PassengerService {
     public static List<Passenger> getList(){
         List<Passenger> list = new ArrayList<>();
         try{
-            ResultSet rs = DBConnect.getInstance().get().executeQuery("select id from passengers");
+            ResultSet rs = DBConnect.getInstance().getStatement().executeQuery("select id from passengers");
             while(rs.next()){
                 list.add(getPassenger(rs.getInt("id")));
             }
