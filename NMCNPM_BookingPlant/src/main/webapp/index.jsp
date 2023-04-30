@@ -174,23 +174,28 @@
                                 <li class="nav-item">
                                     <div class="dropdown-container">
                                         <div class="dropdown-toggle click-dropdown">
-                                            <c:if test="${sessionScope.user != null}">
-                                                <p>Logged in as: ${sessionScope.user.username}</p>
-                                            </c:if>
-
-                                            <c:if test="${sessionScope.user == null}">
-
-                                            <i class="bi bi-person-circle"></i> Account
+                                            <c:choose>
+                                                <c:when test="${sessionScope.user != null}">
+                                                    <p>Logged in as: ${sessionScope.user.username}</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <i class="bi bi-person-circle"></i> Account
+                                                </c:otherwise>
+                                            </c:choose>
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-<%--                                                1. Truy cập vào mục Signin trong trang chủ--%>
-                                                <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signin.jsp">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signup.jsp">Register</a></li>
+                                                <c:choose>
+                                                    <c:when test="${sessionScope.user == null}">
+                                                        <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signin.jsp">Login</a></li>
+                                                        <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signup.jsp">Register</a></li>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                                                    </c:otherwise>
+                                                </c:choose>
                                             </ul>
                                         </div>
-                                      
-                                        </c:if>
                                     </div>
                                 </li>
                             </ul>

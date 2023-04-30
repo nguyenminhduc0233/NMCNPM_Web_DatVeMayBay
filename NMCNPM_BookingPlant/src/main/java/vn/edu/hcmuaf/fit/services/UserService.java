@@ -70,7 +70,7 @@ public class UserService {
         }
     }
 
-    private String hashPassword(String password) throws NoSuchAlgorithmException {
+    public String hashPassword(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(password.getBytes());
         byte[] bytes = md.digest();
@@ -123,6 +123,45 @@ public class UserService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    // Tìm kiếm user theo Email
+    public User findByEmail(String email) {
+        try {
+            Connection connection = DBConnect.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                String role = resultSet.getString("role");
+                Date created_at = resultSet.getDate("created_at");
+                return new User(id, username, email, password, role, created_at);
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    // Cập nhật thông tin User
+    public boolean updateUser(User user) {
+        try {
+            Connection connection = DBConnect.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement("UPDATE users SET username=?, email=?, password=? WHERE id=?");
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getPassword());
+            statement.setInt(4, user.getId());
+            int rowsUpdated = statement.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
 
