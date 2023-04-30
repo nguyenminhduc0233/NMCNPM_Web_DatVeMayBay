@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.model;
+package vn.edu.hcmuaf.fit.models;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,7 +13,8 @@ public class Booking implements Serializable {
     private Date created_at;
     private int id_preferedmeal;
 
-    public Booking(){}
+    public Booking() {
+    }
 
     public Booking(int id, int user_id, int flight_id, String seat_no, int extra_bagage, String status, Date created_at, int id_preferedmeal) {
         this.id = id;

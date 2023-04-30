@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html lang="en">
 
 <head>
@@ -173,14 +174,23 @@
                                 <li class="nav-item">
                                     <div class="dropdown-container">
                                         <div class="dropdown-toggle click-dropdown">
+                                            <c:if test="${sessionScope.user != null}">
+                                                <p>Logged in as: ${sessionScope.user.username}</p>
+                                            </c:if>
+
+                                            <c:if test="${sessionScope.user == null}">
+
                                             <i class="bi bi-person-circle"></i> Account
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
-                                                <li class="nav-item"><a class="dropdown-item" href="signin.jsp">Login</a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="<c:url value="signup.jsp"/>">Register</a></li>
+<%--                                                1. Truy cập vào mục Signin trong trang chủ--%>
+                                                <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signin.jsp">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signup.jsp">Register</a></li>
                                             </ul>
                                         </div>
+                                      
+                                        </c:if>
                                     </div>
                                 </li>
                             </ul>

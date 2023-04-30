@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.model;
+package vn.edu.hcmuaf.fit.models;
 
 import java.io.Serializable;
 

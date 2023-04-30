@@ -1,12 +1,15 @@
 package vn.edu.hcmuaf.fit.database;
-
+import io.github.cdimascio.dotenv.Dotenv;
 import java.sql.*;
 
 public class DBConnect {
     private static DBConnect instance;
-    private static final String DB_URL = System.getenv("DB_URL");
-    private static final String USER = System.getenv("USER");
-    private static final String PASS = System.getenv("PASS");
+    public static Dotenv dotenv = Dotenv.load();
+    private static final String DB_URL = dotenv.get("DB_URL");
+    private static final String DBNAME = dotenv.get("DB_NAME");
+    private static final String USER = dotenv.get("DB_USER");
+    private static final String UNICODE = dotenv.get("DB_UNICODE");
+    private static final String PASS = dotenv.get("DB_PASSWORD");
     private Connection connection;
 
     private DBConnect(){
@@ -16,7 +19,9 @@ public class DBConnect {
             instance = new DBConnect();
             try {
                 instance.connect();
+                System.out.println("Kết nối Database thành công");
             } catch (SQLException | ClassNotFoundException e) {
+                System.out.println("Kết nối Database Thất bại");
                 throw new RuntimeException(e);
             }
         }
@@ -26,7 +31,8 @@ public class DBConnect {
     private void connect() throws SQLException, ClassNotFoundException {
         if(connection==null||connection.isClosed()){
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL,USER,PASS);
+            connection = DriverManager.getConnection(DB_URL+ DBNAME+ UNICODE,USER,PASS);
+
         }
     }
     public Statement get(){
