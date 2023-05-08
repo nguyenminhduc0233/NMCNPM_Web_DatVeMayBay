@@ -3,7 +3,7 @@ package vn.edu.hcmuaf.fit.models;
 import java.io.Serializable;
 
 public class Preferedmeal implements Serializable {
-    private int id;
+    private int id ;
     private String image;
     private String name;
     private int price;
