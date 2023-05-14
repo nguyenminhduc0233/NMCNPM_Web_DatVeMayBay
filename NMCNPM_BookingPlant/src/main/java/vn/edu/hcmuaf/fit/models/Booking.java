@@ -13,6 +13,9 @@ public class Booking implements Serializable {
     private Date created_at;
     private int id_preferedmeal;
 
+    private Flight flight;
+
+
     public Booking() {
     }
 
@@ -25,6 +28,13 @@ public class Booking implements Serializable {
         this.status = status;
         this.created_at = created_at;
         this.id_preferedmeal = id_preferedmeal;
+    }
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 
     public int getId() {
