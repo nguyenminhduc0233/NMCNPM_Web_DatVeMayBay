@@ -251,7 +251,7 @@
           for (Booking p:listb) { %>
 
 
-      <form action="/WebDemo_war/detailHis" method="post">
+<%--      <form action="/detailsHistory" method="post">--%>
         <div class="row">
           <div class="col-12 mb-3" data-aos="fade-up">
             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
@@ -264,9 +264,9 @@
                          title="airline Indigo">
                   </div>
                   <div class="d-flex flex-column ms-2">
-                                            <span class="font-small d-inline-flex mb-0 align-middle">${bk.flight.flight_name}
+                                            <span class="font-small d-inline-flex mb-0 align-middle"><%=p.getFlight().getFlight_name()%>
                                             </span>
-                    <span class="font-small d-inline-flex mb-0 align-middle">${bk.flight.flight_no}</span>
+                    <span class="font-small d-inline-flex mb-0 align-middle"><%=p.getFlight().getFlight_no()%></span>
                   </div>
                 </div>
                 <div>
@@ -292,7 +292,6 @@
                   Time time2 = Time.valueOf(timeString2);
                   LocalDateTime dateTime2 = LocalDateTime.of(date2.toLocalDate(), time2.toLocalTime());
                   long minutesBetween = Duration.between(dateTime, dateTime2).toMinutes();
-
                 %>
                 <%
                   int totalMinutes = (int) minutesBetween;
@@ -314,7 +313,7 @@
                 <div class="fw-bold"><%=p.getCreated_at()%>
                 </div>
                 <button type="submit" class="btn-select btn btn-effect"
-                        onclick="window.location.href='#';">
+                        onclick="window.location.href='/detailsHistory?id_b=<%=p.getId()%>';">
                   <span class="font-small">Details</span>
                 </button>
               </div>
@@ -324,7 +323,7 @@
 
 
         </div>
-      </form>
+<%--      </form>--%>
         <%}%>
 
 

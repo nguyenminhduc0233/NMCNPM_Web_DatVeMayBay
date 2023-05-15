@@ -15,6 +15,11 @@ public class Booking implements Serializable {
 
     private Flight flight;
 
+    private Bagage bagage;
+
+    private Preferedmeal preferedmeal;
+    private Passenger passenger;
+
 
     public Booking() {
     }
@@ -35,6 +40,30 @@ public class Booking implements Serializable {
 
     public void setFlight(Flight flight) {
         this.flight = flight;
+    }
+
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
+    }
+
+    public Bagage getBagage() {
+        return bagage;
+    }
+
+    public void setBagage(Bagage bagage) {
+        this.bagage = bagage;
+    }
+
+    public Preferedmeal getPreferedmeal() {
+        return preferedmeal;
+    }
+
+    public void setPreferedmeal(Preferedmeal preferedmeal) {
+        this.preferedmeal = preferedmeal;
     }
 
     public int getId() {
@@ -99,5 +128,22 @@ public class Booking implements Serializable {
 
     public void setId_preferedmeal(int id_preferedmeal) {
         this.id_preferedmeal = id_preferedmeal;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id=" + id +
+                ", user_id=" + user_id +
+                ", flight_id=" + flight_id +
+                ", seat_no='" + seat_no + '\'' +
+                ", extra_bagage=" + extra_bagage +
+                ", status='" + status + '\'' +
+                ", created_at=" + created_at +
+                ", id_preferedmeal=" + id_preferedmeal +
+                ", flight=" + flight +
+                ", bagage=" + bagage +
+                ", preferedmeal=" + preferedmeal +
+                '}';
     }
 }
