@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.database.DBConnect;
+
 import vn.edu.hcmuaf.fit.models.User;
 
 import java.security.MessageDigest;
@@ -46,7 +47,7 @@ public class UserService {
         }
     }
 
-    public User login(String username, String password) {
+    public  User login(String username, String password) {
         try {
             Connection connection = DBConnect.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE username = ? AND password = ?");
@@ -70,7 +71,9 @@ public class UserService {
         }
     }
 
-    public String hashPassword(String password) throws NoSuchAlgorithmException {
+
+
+    public  String hashPassword(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(password.getBytes());
         byte[] bytes = md.digest();
@@ -163,5 +166,12 @@ public class UserService {
             return false;
         }
     }
+
+//    public static void main(String[] args) {
+//        System.out.println(UserService.login("nguyenthitien1", "1234567@"));
+//    }
+
+
+
 }
 

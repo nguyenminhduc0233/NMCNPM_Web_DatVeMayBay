@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.database.DBConnect;
+
 import vn.edu.hcmuaf.fit.models.Passenger;
 
 import java.sql.PreparedStatement;
@@ -23,6 +24,10 @@ public class PassengerService {
         }
         return null;
     }
+
+
+
+
     public static List<Passenger> getList(){
         List<Passenger> list = new ArrayList<>();
         try{
@@ -35,6 +40,8 @@ public class PassengerService {
         }
         return list;
     }
+
+
 
     // 2.2 Lấy danh sách vé đặt
     public static List<Passenger> getListByTime(int month, int year){

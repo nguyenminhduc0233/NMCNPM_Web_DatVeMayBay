@@ -114,6 +114,18 @@
                                             <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
                                         </a>
                                     </li>
+                                    <c:choose>
+                                        <c:when test="${sessionScope.user != null}">
+                                            <li class="nav-item">
+                                                <a href="/history?user_id=${sessionScope.user.id}" class="position-relative card-effect">
+                                                    <div class="card-box"></div>
+                                                    <i class="bi bi-eye ps-4 pe-2"></i>History
+                                                </a>
+                                            </li>
+                                        </c:when>
+
+                                    </c:choose>
+
                                 </ul>
                                 <div class="mt-5">
                                     <p class="d-inline-flex theme-text-white">
