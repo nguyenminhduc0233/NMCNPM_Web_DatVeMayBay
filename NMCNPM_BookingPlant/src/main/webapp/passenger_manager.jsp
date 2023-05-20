@@ -1,9 +1,8 @@
-<%@ page import="vn.edu.hcmuaf.fit.model.Booking" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.utils.NumberFormat" %>
 <%@ page import="vn.edu.hcmuaf.fit.services.*" %>
-<%@ page import="vn.edu.hcmuaf.fit.model.Passenger" %>
 <%@ page import="vn.edu.hcmuaf.fit.services.BookingService" %>
+<%@ page import="vn.edu.hcmuaf.fit.models.Passenger" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en" xmlns:x-transition="http://www.w3.org/1999/xhtml">
@@ -15,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="admin/assets/css/tailwind.output.css" />
   <link rel="stylesheet" href="admin/assets/css/filter.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer ></script>
   <script src="admin/assets/js/init-alpine.js"></script>
   <style>
@@ -34,7 +34,7 @@
       </a>
       <ul class="mt-6">
         <li class="relative px-6 py-3">
-          <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="/NMCNPM_BookingPlant_war/">
+          <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="/">
             <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
             </svg>
@@ -45,7 +45,7 @@
       <ul>
         <li class="relative px-6 py-3">
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true" ></span>
-          <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"href="/NMCNPM_BookingPlant_war/bookings" >
+          <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"href="/passengers" >
             <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"  >
               <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
             </svg>
@@ -73,9 +73,9 @@
             <div class="absolute inset-y-0 flex items-center pl-2">
 
             </div>
-            <form action="/Project_CuaHangMuBaoHiem_war/find-bill" method="get">
+            <form action="/find-bill" method="get">
               <input class="pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input" style="width: 450px" type="text" name="text" placeholder="Id vé" />
-              <input type="submit" value="Tìm kiếm" style="width:80px;height: 36px;color: black;border-radius: 5px"></form>
+              <i class="fa fa-search"><input type="submit" value=""></i></form>
           </div>
         </div>
         <ul class="flex items-center flex-shrink-0 space-x-6">
@@ -149,7 +149,7 @@
             int count = (int) request.getAttribute("count");
           %>
 <%--            1. Điền thông tin tháng, năm vào form--%>
-          <form action="/WebBookingPlant_war/sales" method="get" style="margin-left: 176px">
+          <form action="/sales" method="get" style="margin-left: 176px">
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Tháng</span>
