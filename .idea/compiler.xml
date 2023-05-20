@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="WebBookingPlant" />
+        <module name="Booking" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Booking" target="1.8" />
       <module name="WebBookingPlant" target="17" />
     </bytecodeTargetLevel>
   </component>

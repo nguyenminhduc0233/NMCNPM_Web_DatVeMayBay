@@ -203,6 +203,17 @@
                                                         <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/signup.jsp">Register</a></li>
                                                     </c:when>
                                                     <c:otherwise>
+<%--                                                        <%-- Display link to admin page --%>
+                                                        <c:choose>
+                                                            <c:when test="${sessionScope.user.role.equals('admin')}">
+                                                                <!-- Do something when condition1 is true -->
+                                                                <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/passengers">Manager</a></li>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <!-- Do something when condition1 is false -->
+                                                            </c:otherwise>
+                                                        </c:choose>
+
                                                         <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Logout</a></li>
                                                     </c:otherwise>
                                                 </c:choose>
