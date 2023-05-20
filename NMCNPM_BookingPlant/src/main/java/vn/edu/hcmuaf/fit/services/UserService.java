@@ -10,7 +10,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserService {
     public boolean register(String username, String email, String password) {
@@ -116,7 +118,7 @@ public class UserService {
 
     public static User getUser(int id){
         try {
-            PreparedStatement preparedStatement = DBConnect.getInstance().getConnection().prepareStatement("select username,email,password, role, created_at, name from users where id=?");
+            PreparedStatement preparedStatement = DBConnect.getInstance().getConnection().prepareStatement("select username,email,password, role, created_at from users where id=?");
             preparedStatement.setInt(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
@@ -164,6 +166,49 @@ public class UserService {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+    public static List<User> getListUser(){
+        List<User> list = new ArrayList<User>();
+        try{
+            ResultSet rs = DBConnect.getInstance().getStatement().executeQuery("select id from users where role != 'admin'");
+            while(rs.next()){
+                list.add(getUser(rs.getInt(1)));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public static List<String> getListRolesExcept(int id){
+        List<String> roles = new ArrayList<String>();
+        try{
+            PreparedStatement prs = DBConnect.getInstance().getConnection().prepareStatement("select role from users where id=?");
+            prs.setInt(1,id);
+            ResultSet rs = prs.executeQuery();
+            String role = "";
+            if(rs.next()){
+                role+=rs.getString(1);
+            }
+            PreparedStatement prs1 = DBConnect.getInstance().getConnection().prepareStatement("select distinct role from users where role!=?");
+            prs1.setString(1,role);
+            ResultSet rs1 = prs1.executeQuery();
+            while(rs1.next()){
+                roles.add(rs1.getString(1));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return roles;
+    }
+    public static void updatePermission(int id,String per){
+        try{
+            PreparedStatement prs = DBConnect.getInstance().getConnection().prepareStatement("update users set role =? where id=?");
+            prs.setString(1,per);
+            prs.setInt(2,id);
+            prs.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
         }
     }
 

@@ -29,7 +29,7 @@
   <!-- Desktop sidebar -->
   <aside class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block" >
     <div class="py-4 text-gray-500 dark:text-gray-400">
-      <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/Project_CuaHangMuBaoHiem_war/ManageProduct" >
+      <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/passengers" >
         Admin
       </a>
       <ul class="mt-6">
@@ -50,6 +50,14 @@
               <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
             </svg>
             <span class="ml-4">Quản lý vé đặt</span>
+          </a>
+        </li>
+        <li class="relative px-6 py-3">
+          <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"href="/user-manager" >
+            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"  >
+              <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
+            <span class="ml-4">Quản lý phân quyền</span>
           </a>
         </li>
       </ul>
@@ -73,9 +81,9 @@
             <div class="absolute inset-y-0 flex items-center pl-2">
 
             </div>
-            <form action="/find-bill" method="get">
-              <input class="pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input" style="width: 450px" type="text" name="text" placeholder="Id vé" />
-              <i class="fa fa-search"><input type="submit" value=""></i></form>
+            <form action="/find-bill" method="get" onsubmit="check_validation()">
+              <input id="id_passenger" class="pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input" style="width: 450px" type="number" name="id" placeholder="Id vé" />
+              <input type="submit" value=""></form>
           </div>
         </div>
         <ul class="flex items-center flex-shrink-0 space-x-6">
