@@ -66,4 +66,18 @@ public class PassengerService {
         }
         return result;
     }
+    public static List<Passenger> getPassengerbyId(int id){
+        List<Passenger> list = new ArrayList<Passenger>();
+        try{
+            PreparedStatement prs = DBConnect.getInstance().getConnection().prepareStatement("select id from passengers where id like '%'+?+'%'");
+            prs.setInt(1,id);
+            ResultSet rs = prs.executeQuery();
+            while(rs.next()){
+                list.add(getPassenger(rs.getInt(1)));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
 }
