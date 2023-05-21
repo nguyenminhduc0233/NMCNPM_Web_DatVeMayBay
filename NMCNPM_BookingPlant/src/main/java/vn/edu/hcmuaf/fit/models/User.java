@@ -23,12 +23,16 @@ public class User implements Serializable {
         this.created_at = created_at;
     }
 
-    public int getId() {
-        return id;
+    public User(String username, String email, String password, String role, Date created_at) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.created_at = created_at;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getId() {
+        return id;
     }
 
     public String getUsername() {

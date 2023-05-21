@@ -134,16 +134,15 @@ public class UserService {
     public User findByEmail(String email) {
         try {
             Connection connection = DBConnect.getInstance().getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT id, username, email, role, created_at FROM users WHERE email = ?");
             statement.setString(1, email);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String username = resultSet.getString("username");
-                String password = resultSet.getString("password");
                 String role = resultSet.getString("role");
                 Date created_at = resultSet.getDate("created_at");
-                return new User(id, username, email, password, role, created_at);
+                return new User(id, username, email, null, role, created_at);
             } else {
                 return null;
             }
@@ -157,9 +156,11 @@ public class UserService {
         try {
             Connection connection = DBConnect.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("UPDATE users SET username=?, email=?, password=? WHERE id=?");
+            System.out.println(statement);
             statement.setString(1, user.getUsername());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
+            System.out.println(user.getPassword());
             statement.setInt(4, user.getId());
             int rowsUpdated = statement.executeUpdate();
             return rowsUpdated > 0;
