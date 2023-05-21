@@ -213,6 +213,27 @@ public class UserService {
         }
     }
 
+    public boolean changePassword(String email, String currentPassword, String newPassword) {
+        try {
+            Connection connection = DBConnect.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE email = ? AND password = ?");
+            statement.setString(1, email);
+            statement.setString(2, hashPassword(currentPassword));
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                statement = connection.prepareStatement("UPDATE users SET password = ? WHERE email = ?");
+                statement.setString(1, hashPassword(newPassword));
+                statement.setString(2, email);
+                statement.executeUpdate();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 //    public static void main(String[] args) {
 //        System.out.println(UserService.login("nguyenthitien1", "1234567@"));
 //    }

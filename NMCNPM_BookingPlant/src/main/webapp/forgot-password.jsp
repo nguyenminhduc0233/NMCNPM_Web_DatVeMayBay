@@ -15,7 +15,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <!--title tag for page -->
-    <title>Flight World - Login Page</title>
+    <title>Flight World - ForgotPassword Page</title>
   </head>
 
   <body>

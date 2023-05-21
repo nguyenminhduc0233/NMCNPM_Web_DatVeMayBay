@@ -215,6 +215,7 @@
                                                         </c:choose>
 
                                                         <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                                                        <li class="nav-item"><a class="dropdown-item" href="${pageContext.request.contextPath}/change-password.jsp">Change Password</a></li>
                                                     </c:otherwise>
                                                 </c:choose>
                                             </ul>
