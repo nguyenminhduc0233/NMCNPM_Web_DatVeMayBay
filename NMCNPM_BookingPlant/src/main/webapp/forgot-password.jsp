@@ -210,7 +210,7 @@
                   <form class="needs-validation" novalidate action="/forgot-password" method="post">
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                      <input type="email" class="form-control min-h58" id="exampleInputEmail1" placeholder="Enter Your Email" required>
+                      <input type="email" class="form-control min-h58" id="exampleInputEmail1" name="email" placeholder="Enter Your Email" required>
                     </div>
                     <div class="mb-3">
                       <p class="font-small">Enter your email address and we'll send you a link to reset your password.</p>

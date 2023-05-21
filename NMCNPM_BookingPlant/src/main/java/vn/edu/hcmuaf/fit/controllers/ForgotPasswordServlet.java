@@ -28,14 +28,19 @@ public class ForgotPasswordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         User user = userService.findByEmail(email);
+        System.out.println(userService.findByEmail(email));
         if (user == null) {
             request.setAttribute("errorMsg", "Địa chỉ email không tồn tại trong hệ thống");
             request.getRequestDispatcher("forgot-password.jsp").forward(request, response);
             return;
         }
+        System.out.println(user.getUsername());
         String newPassword = PasswordUtils.generateNewPassword();
+        System.out.println("New password: " + newPassword);
         try {
-            user.setPassword(userService.hashPassword(newPassword)); // Assuming you have a PasswordUtils class to hash the password
+            String hashedPassword = userService.hashPassword(newPassword); // Hash the new password
+            user.setPassword(hashedPassword); // Update the User object with the new hashed password
+            System.out.println("CC:" + userService.hashPassword(newPassword));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
