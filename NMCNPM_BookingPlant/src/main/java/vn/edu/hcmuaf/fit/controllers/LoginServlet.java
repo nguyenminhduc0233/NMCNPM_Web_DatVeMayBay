@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("index.jsp"); // 8. chuyển sang trang index
         } else { // if email/password không trùng khớp
             request.setAttribute("error", "Invalid username or password"); // 9 showSignInError(msg)
-            request.getRequestDispatcher("login.jsp").forward(request, response); // 10. chuyển lại trang signin
+            request.getRequestDispatcher("signin.jsp").forward(request, response); // 10. chuyển lại trang signin
         }
     }
 }
